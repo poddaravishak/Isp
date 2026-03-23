@@ -1,0 +1,5 @@
+import GenericPage from "@/components/GenericPage";
+const data = [{pop:"Main POP",clients:"4,210",active:"3,980",expired:"130",revenue:"৳18,90,000",zone:"Zone A, D"},{pop:"Reseller A",clients:"2,100",active:"1,980",expired:"80",revenue:"৳9,45,000",zone:"Zone B"},{pop:"Reseller B",clients:"1,654",active:"1,520",expired:"94",revenue:"৳7,43,000",zone:"Zone C"},{pop:"Reseller C",clients:"568",active:"411",expired:"117",revenue:"৳1,85,000",zone:"Zone E"}];
+export default function POPWiseClients() {
+  return <GenericPage title="POP Wise Clients" subtitle="Client distribution by POP/Reseller" stats={[{label:"Total POPs",value:"8",color:"text-blue-600"},{label:"Total Clients",value:"8,532",color:"text-gray-800"},{label:"Best POP",value:"Main POP",color:"text-green-600"},{label:"Total Revenue",value:"৳28,45,000",color:"text-purple-600"}]} columns={[{key:"pop",label:"POP/Reseller"},{key:"clients",label:"Total Clients"},{key:"active",label:"Active"},{key:"expired",label:"Expired"},{key:"revenue",label:"Revenue"},{key:"zone",label:"Zone Coverage"}]} data={data} />;
+}

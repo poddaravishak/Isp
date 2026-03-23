@@ -1,0 +1,5 @@
+import GenericPage from "@/components/GenericPage";
+const data = [{reseller:"Reseller A",zone:"Zone B",clients:"2,100",new:"34",renew:"148",revenue:"৳9,45,000",commission:"৳94,500"},{reseller:"Reseller B",zone:"Zone C",clients:"1,654",new:"22",renew:"98",revenue:"৳7,43,000",commission:"৳74,300"},{reseller:"Reseller C",zone:"Zone E",clients:"568",new:"8",renew:"35",revenue:"৳1,85,000",commission:"৳18,500"}];
+export default function ResellerSalesReport() {
+  return <GenericPage title="Reseller Sales Report" subtitle="Sales performance by reseller/POP" stats={[{label:"Total Resellers",value:"5",color:"text-blue-600"},{label:"Reseller Revenue",value:"৳18,73,000",color:"text-green-600"},{label:"Commission Paid",value:"৳1,87,300",color:"text-orange-600"},{label:"Top Reseller",value:"Reseller A",color:"text-purple-600"}]} columns={[{key:"reseller",label:"Reseller"},{key:"zone",label:"Zone"},{key:"clients",label:"Clients"},{key:"new",label:"New"},{key:"renew",label:"Renewed"},{key:"revenue",label:"Revenue"},{key:"commission",label:"Commission (10%)"}]} data={data} />;
+}

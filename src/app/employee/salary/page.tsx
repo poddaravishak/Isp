@@ -1,0 +1,7 @@
+"use client";
+import GenericPage from "@/components/GenericPage";
+const badge = (val: unknown) => { const s = String(val); return <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${s==="Paid"?"bg-green-100 text-green-700":"bg-yellow-100 text-yellow-700"}`}>{s}</span>; };
+const data = [{id:"EMP001",name:"Md. Rafiqul Islam",role:"Network Engineer",basic:"৳35,000",bonus:"৳5,000",deduct:"৳0",net:"৳40,000",month:"March 2026",status:"Paid"},{id:"EMP002",name:"Sadia Akter",role:"Customer Service",basic:"৳22,000",bonus:"৳2,000",deduct:"৳500",net:"৳23,500",month:"March 2026",status:"Unpaid"},{id:"EMP003",name:"Kamal Hossain",role:"Field Technician",basic:"৳25,000",bonus:"৳3,000",deduct:"৳0",net:"৳28,000",month:"March 2026",status:"Paid"}];
+export default function EmployeeSalary() {
+  return <GenericPage title="Employee Salary" subtitle="Monthly salary management" stats={[{label:"Total Payroll",value:"৳6,20,000",color:"text-blue-600"},{label:"Paid",value:"৳4,80,000",color:"text-green-600"},{label:"Pending",value:"৳1,40,000",color:"text-orange-600"},{label:"Staff Count",value:"24",color:"text-gray-800"}]} addLabel="Process Salary" columns={[{key:"id",label:"ID"},{key:"name",label:"Employee"},{key:"role",label:"Role"},{key:"basic",label:"Basic"},{key:"bonus",label:"Bonus"},{key:"deduct",label:"Deduction"},{key:"net",label:"Net Salary"},{key:"month",label:"Month"},{key:"status",label:"Status",render:badge}]} data={data} />;
+}
